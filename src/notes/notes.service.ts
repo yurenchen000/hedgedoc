@@ -353,6 +353,7 @@ export class NotesService {
       id: note.id,
       alias: note.alias,
       title: note.title ?? '',
+      version: note.version,
       createTime: (await this.getFirstRevision(note)).createdAt,
       description: note.description ?? '',
       editedBy: note.authorColors.map(

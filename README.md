@@ -105,7 +105,7 @@ The license does not include the HedgeDoc logo, whose terms of usage can be foun
 [github-issue-tracker]: https://github.com/hedgedoc/hedgedoc/issues/
 [poeditor-image]: https://img.shields.io/badge/POEditor-translate-blue.svg
 [poeditor-url]: https://poeditor.com/join/project/1OpGjF2Jir
-[hedgedoc-demo]: https://demo.hedgedoc.org
+[hedgedoc-demo]: https://hedgedoc.org/demo/
 [hedgedoc-demo-features]: https://demo.hedgedoc.org/features
 [hedgedoc-community]: https://community.hedgedoc.org
 [hedgedoc-community-calls]: https://community.hedgedoc.org/t/codimd-community-call/19

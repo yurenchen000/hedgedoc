@@ -9,6 +9,7 @@ import {
   Controller,
   Delete,
   NotFoundException,
+  Param,
   Post,
   Put,
   Req,
@@ -18,6 +19,7 @@ import { Session } from 'express-session';
 
 import { AlreadyInDBError, NotInDBError } from '../../../errors/errors';
 import { IdentityService } from '../../../identity/identity.service';
+import { LdapAuthGuard } from '../../../identity/ldap/ldap.strategy';
 import { LocalAuthGuard } from '../../../identity/local/local.strategy';
 import { LoginDto } from '../../../identity/local/login.dto';
 import { RegisterDto } from '../../../identity/local/register.dto';
@@ -86,6 +88,17 @@ export class AuthController {
   @Post('local/login')
   login(
     @Req() request: Request & { session: { user: string } },
+    @Body() loginDto: LoginDto,
+  ): void {
+    // There is no further testing needed as we only get to this point if LocalAuthGuard was successful
+    request.session.user = loginDto.username;
+  }
+
+  @UseGuards(LdapAuthGuard)
+  @Post('ldap/:identifier')
+  loginWithLdap(
+    @Req() request: Request & { session: { user: string } },
+    @Param('identifier') identifier: string,
     @Body() loginDto: LoginDto,
   ): void {
     // There is no further testing needed as we only get to this point if LocalAuthGuard was successful

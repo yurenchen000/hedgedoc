@@ -66,7 +66,7 @@ export interface AuthConfig {
     searchAttributes: string[];
     usernameField: string;
     useridField: string;
-    tlsCa: string[];
+    tlsCa: string;
   }[];
   saml: {
     identifier: string;

@@ -3528,3 +3528,17 @@
 
 })));
 
+
+// init viewer
+window.onload=function(){
+  var ele = document.getElementById('doc');
+  var opt = {
+    title: 0,
+    button: 0,
+    fullscreen: false,
+    navbar: 0,
+  };
+  if (ele)
+    var gallery = new Viewer(ele, opt);
+}
+

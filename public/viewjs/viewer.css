@@ -181,6 +181,10 @@
   overflow: hidden;
 }
 
+.viewer-navbar img {
+    background-color: white;
+}
+
 .viewer-list {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -251,6 +255,7 @@
   left: 0;
   position: absolute;
   top: 0;
+  background-color: white;
 }
 
 .viewer-toolbar > ul {

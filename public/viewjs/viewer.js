@@ -3536,9 +3536,13 @@ window.onload=function(){
     title: 0,
     button: 0,
     fullscreen: false,
-    navbar: 0,
+    navbar: parseInt(localStorage.navbar) || 0,
   };
-  if (ele)
-    var gallery = new Viewer(ele, opt);
-}
+  if (ele) {
+    setTimeout(function(){
+      window.gallery = new Viewer(ele, opt);
+    }, typeof(editor)!='undefined' ? 2000 : 0)
+  }
+  //gallery.update()
+};
 

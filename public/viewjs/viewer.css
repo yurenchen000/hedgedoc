@@ -472,7 +472,10 @@
   z-index: 1;
 }
 
-
+/* btn group by space */
+li.viewer-reset, li.viewer-next {
+    margin-right: 24px;
+}
 
 @media (max-width: 767px) {
   .viewer-hide-xs-down {

@@ -3541,7 +3541,8 @@ window.onload=function(){
   if (ele) {
     setTimeout(function(){
       window.gallery = new Viewer(ele, opt);
-    }, typeof(editor)!='undefined' ? 2000 : 0)
+      if(gallery.length==0) setTimeout(function(){ gallery.update(); }, 2000);
+    }, typeof(editor)!='undefined' ? 2000 : 10)
   }
   //gallery.update()
 };

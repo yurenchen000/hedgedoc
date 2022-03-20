@@ -230,7 +230,7 @@ describe('AliasService', () => {
 
     it('mark the alias as primary', async () => {
       jest
-        .spyOn(aliasRepo, 'findOne')
+        .spyOn(aliasRepo, 'findOneBy')
         .mockResolvedValueOnce(alias)
         .mockResolvedValueOnce(alias2);
       jest

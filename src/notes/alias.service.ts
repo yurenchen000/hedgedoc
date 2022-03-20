@@ -113,8 +113,12 @@ export class AliasService {
       throw new NotInDBError(`The alias '${alias}' is not used by this note.`);
     }
 
-    const oldPrimary = await this.aliasRepository.findOne(oldPrimaryId);
-    const newPrimary = await this.aliasRepository.findOne(newPrimaryId);
+    const oldPrimary = await this.aliasRepository.findOneBy({
+      id: oldPrimaryId,
+    });
+    const newPrimary = await this.aliasRepository.findOneBy({
+      id: newPrimaryId,
+    });
 
     if (!oldPrimary || !newPrimary) {
       throw new Error('This should not happen!');

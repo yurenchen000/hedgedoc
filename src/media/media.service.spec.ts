@@ -210,7 +210,7 @@ describe('MediaService', () => {
     });
     it("fails: can't find mediaUpload", async () => {
       const testFileName = 'testFilename';
-      jest.spyOn(mediaRepo, 'findOne').mockResolvedValueOnce(undefined);
+      jest.spyOn(mediaRepo, 'findOne').mockResolvedValueOnce(null);
       await expect(service.findUploadByFilename(testFileName)).rejects.toThrow(
         NotInDBError,
       );

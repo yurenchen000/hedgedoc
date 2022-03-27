@@ -138,7 +138,7 @@ describe('NotesService', () => {
       const note = Note.create(user, alias) as Note;
 
       it('with no note', async () => {
-        jest.spyOn(noteRepo, 'find').mockResolvedValueOnce(undefined);
+        jest.spyOn(noteRepo, 'find').mockResolvedValueOnce(null);
         const notes = await service.getUserNotes(user);
         expect(notes).toEqual([]);
       });

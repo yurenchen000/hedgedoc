@@ -151,7 +151,7 @@ export class MediaService {
       where: { user: Equal(user) },
       relations: ['user', 'note'],
     });
-    if (mediaUploads === undefined) {
+    if (mediaUploads === null) {
       return [];
     }
     return mediaUploads;
@@ -168,7 +168,7 @@ export class MediaService {
       where: { note: Equal(note) },
       relations: ['user', 'note'],
     });
-    if (mediaUploads === undefined) {
+    if (mediaUploads === null) {
       return [];
     }
     return mediaUploads;

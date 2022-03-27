@@ -65,7 +65,7 @@ export class NotesService {
         'aliases',
       ],
     });
-    if (notes === undefined) {
+    if (notes === null) {
       return [];
     }
     return notes;

@@ -171,7 +171,7 @@ export class AliasService {
     const aliasToDelete = (await note.aliases).find(
       (anAlias) => anAlias.name === alias,
     );
-    if (aliasToDelete !== null) {
+    if (aliasToDelete !== undefined) {
       await this.aliasRepository.remove(aliasToDelete);
     }
     note.aliases = Promise.resolve(filteredAliases);

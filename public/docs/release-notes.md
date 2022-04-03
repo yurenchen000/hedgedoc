@@ -2,6 +2,10 @@
 
 ## <i class="fa fa-tag"></i> 1.9.3 <i class="fa fa-calendar-o"></i> 2022-04-03
 
+⚠️ **Warning:** If you deploy HedgeDoc and MariaDB with docker-compose using a checkout of our 
+[container repo](https://github.com/hedgedoc/container), you will need to manually convert the character set
+of the database to utf8mb4 when updating. See the [corresponding PR](https://github.com/hedgedoc/container/pull/287) for more information.
+
 ### Enhancements
 - Libravatar avatars render as ident-icons when no avatar image was uploaded to Libravatar or Gravatar
 - Add database connection error message to log output

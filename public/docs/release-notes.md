@@ -1,15 +1,29 @@
 # Release Notes
 
-## UNRELEASED
-
-### Bugfixes
-- Fix error that Libravatar user avatars were not shown when using OAuth2 login
-- Fix `bin/manage_users` not accepting numeric passwords (thanks to [@carr0t2](https://github.com/carr0t2) for reporting)
+## <i class="fa fa-tag"></i> 1.9.3 <i class="fa fa-calendar-o"></i> 2022-04-03
 
 ### Enhancements
 - Libravatar avatars render as ident-icons when no avatar image was uploaded to Libravatar or Gravatar
 - Add database connection error message to log output
 - Allow SAML authentication provider to be named
+
+### Bugfixes
+- Fix error that Libravatar user avatars were not shown when using OAuth2 login
+- Fix `bin/manage_users` not accepting numeric passwords (thanks to [@carr0t2](https://github.com/carr0t2) for reporting)
+
+### Contributors
+- ced (translator)
+- deluxghost (translator)
+- [Dennis Gaida](https://github.com/DennisGaida)
+- Michael Hauer (translator)
+- [Moritz Schlarb](https://github.com/moschlar)
+- Mostafa Ahangarha (translator)
+- [Sandro](https://github.com/SuperSandro2000)
+- Sergio Varela (translator)
+- Tạ Quang Khôi (translator)
+- Tiago Triques (translator)
+- tmpod (translator)
+- [Uchiha Kakashi](https://github.com/licy183)
 
 ## <i class="fa fa-tag"></i> 1.9.2 <i class="fa fa-calendar-o"></i> 2021-12-03
 

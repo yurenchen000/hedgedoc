@@ -6,6 +6,7 @@
 - Libravatar avatars render as ident-icons when no avatar image was uploaded to Libravatar or Gravatar
 - Add database connection error message to log output
 - Allow SAML authentication provider to be named
+- Suppress error message when `git` binary is not found
 
 ### Bugfixes
 - Fix error that Libravatar user avatars were not shown when using OAuth2 login
@@ -24,6 +25,7 @@
 - Tiago Triques (translator)
 - tmpod (translator)
 - [Uchiha Kakashi](https://github.com/licy183)
+
 
 ## <i class="fa fa-tag"></i> 1.9.2 <i class="fa fa-calendar-o"></i> 2021-12-03
 
